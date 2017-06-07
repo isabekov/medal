@@ -146,7 +146,7 @@ methods
 		iE = 1;
 		while 1
 			sumErr = 0;
-
+			self.batchIdx = self.createBatches(X);
 			% SIMULATED ANNEALING
 			if iE > self.beginAnneal
 				self.lRate = max(lRate0*((iE-self.beginAnneal)^(-.25)),1e-8);
